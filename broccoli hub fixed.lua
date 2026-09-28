@@ -1,3 +1,14 @@
+getgenv().__TGT_TOKEN = (getgenv().__TGT_TOKEN or 0) + 1
+local tgtToken = getgenv().__TGT_TOKEN
+
+local function fn()
+	return getgenv().__TGT_TOKEN == tgtToken
+end
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
